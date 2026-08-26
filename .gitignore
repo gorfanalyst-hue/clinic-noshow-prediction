@@ -1,0 +1,21 @@
+# Données volumineuses ou brutes (ne pas versionner)
+data/raw/
+*.csv
+*.zip
+
+# Environnements virtuels Python
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Identifiants et secrets
+.env
+*.pem
+
+# Fichiers système
+.DS_Store
+Thumbs.db
