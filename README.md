@@ -83,6 +83,14 @@ Les modèles à base d'arbres plafonnent autour de 0.74 de ROC-AUC sans amélior
 
 Objectif : faire émerger des profils de comportement à partir des seules caractéristiques patient, **sans utiliser la variable cible** (`presence`), afin de garder une validation externe possible a posteriori.
 
+### Détermination du nombre de clusters
+
+![Méthode du coude](images/methode_coude.png)
+
+### Profils identifiés
+
+![Visualisation des clusters par PCA](images/scatter_pca_clusters.png)
+
 ### Méthodologie
 
 Un premier essai incluant des variables binaires (comorbidités, sexe, SMS) a produit un score de silhouette faible (0.16 à 0.25), K-Means étant peu adapté au mélange de variables continues et binaires. Le clustering final a été recentré sur quatre variables continues : `age`, `delai_jours`, `nb_rdv_precedents`, `taux_presence_historique`, ce qui a nettement amélioré la séparation des groupes (silhouette jusqu'à 0.36).
