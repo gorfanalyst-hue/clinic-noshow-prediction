@@ -79,17 +79,19 @@ Une analyse SHAP complémentaire confirme le sens de ces effets (délai court �
 
 Les modèles à base d'arbres plafonnent autour de 0.74 de ROC-AUC sans amélioration notable entre eux, ce qui suggère avoir atteint la limite de ce que les features actuelles permettent d'expliquer. Une progression ultérieure passerait probablement par l'ajout de nouvelles features (spécialité du médecin, distance domicile-clinique, historique plus fin) plutôt que par un modèle plus complexe.
 
+![Importance des features (SHAP)](notebooks/images/shap_summary.png)
+
 ## Segmentation des patients (clustering)
 
 Objectif : faire émerger des profils de comportement à partir des seules caractéristiques patient, **sans utiliser la variable cible** (`presence`), afin de garder une validation externe possible a posteriori.
 
 ### Détermination du nombre de clusters
 
-![Méthode du coude](images/methode_coude.png)
+![Méthode du coude](notebooks/images/methode_coude.png)
 
 ### Profils identifiés
 
-![Visualisation des clusters par PCA](images/scatter_pca_clusters.png)
+![Visualisation des clusters par PCA](notebooks/images/scatter_pca_clusters.png)
 
 ### Méthodologie
 
