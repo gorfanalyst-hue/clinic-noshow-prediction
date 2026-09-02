@@ -1,7 +1,11 @@
 # Données volumineuses ou brutes (ne pas versionner)
 data/raw/
-*.csv
+data/raw/*.csv
 *.zip
+
+# Fichiers du dashboard à conserver malgré la règle ci-dessus :
+# data/processed/*.csv (dataset allégé pour Streamlit)
+# data/models/*.pkl et *.json (modèle entraîné)
 
 # Environnements virtuels Python
 venv/
