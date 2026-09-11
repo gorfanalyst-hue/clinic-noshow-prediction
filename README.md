@@ -1,3 +1,5 @@
+![Tests](https://github.com/gorfanalyst-hue/clinic-noshow-prediction/actions/workflows/tests.yml/badge.svg)
+
 # Clinic No-Show Prediction
 
 Prédiction et analyse des rendez-vous médicaux manqués (no-show), à partir de données réelles anonymisées de rendez-vous médicaux au Brésil (~110 000 rendez-vous, source : [Kaggle - Medical Appointment No Shows](https://www.kaggle.com/datasets/joniarroba/noshowappointments)).
