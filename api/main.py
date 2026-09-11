@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 import joblib
 import json
 
@@ -40,8 +40,8 @@ class Patient(BaseModel):
     taux_presence_historique: float = Field(..., ge=0.0, le=1.0)
     premier_rdv: int = Field(..., ge=0, le=1)
 
-    class Config:
-        json_schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "age": 35,
                 "tranche_age": 2,
@@ -59,6 +59,7 @@ class Patient(BaseModel):
                 "premier_rdv": 0,
             }
         }
+    )
 
 
 class PredictionResponse(BaseModel):
